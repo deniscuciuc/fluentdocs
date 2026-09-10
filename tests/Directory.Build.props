@@ -1,0 +1,17 @@
+<Project>
+  <Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(MSBuildThisFileDirectory)../'))" />
+
+  <PropertyGroup>
+    <IsPackable>false</IsPackable>
+    <!--
+      8602: dereference of a possibly-null reference — routine in a test that has just
+      asserted the value is present. xUnit1051/2031/2013 are analyzer opinions about
+      CancellationToken and collection assertions that would add noise, not safety, here.
+    -->
+    <NoWarn>$(NoWarn);8602;xUnit1051;xUnit2031;xUnit2013</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup Condition="'$(MSBuildProjectName)' != 'FluentDocs.Docs.Snippets'">
+    <Using Include="Xunit" />
+  </ItemGroup>
+</Project>
