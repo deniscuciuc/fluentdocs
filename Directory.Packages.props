@@ -17,7 +17,7 @@
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.3.0" />
     <PackageVersion Include="NSubstitute" Version="5.3.0" />
     <PackageVersion Include="PDFsharp" Version="6.2.4" />
-    <PackageVersion Include="ScottPlot" Version="5.1.58" />
+    <PackageVersion Include="ScottPlot" Version="5.1.59" />
     <PackageVersion Include="xunit.v3" Version="3.2.2" />
     <PackageVersion Include="xunit.runner.visualstudio" Version="3.1.5" />
     <PackageVersion Include="xunit.v3.extensibility.core" Version="3.2.2" />
