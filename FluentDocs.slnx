@@ -1,0 +1,25 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/FluentDocs.Abstractions/FluentDocs.Abstractions.csproj" />
+    <Project Path="src/FluentDocs.Charts/FluentDocs.Charts.csproj" />
+    <Project Path="src/FluentDocs.Documents.Docx/FluentDocs.Documents.Docx.csproj" />
+    <Project Path="src/FluentDocs.Documents.Markdown/FluentDocs.Documents.Markdown.csproj" />
+    <Project Path="src/FluentDocs.Documents.Pdf/FluentDocs.Documents.Pdf.csproj" />
+    <Project Path="src/FluentDocs/FluentDocs.csproj" />
+    <Project Path="src/FluentDocs.Presentations/FluentDocs.Presentations.csproj" />
+    <Project Path="src/FluentDocs.Tables/FluentDocs.Tables.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/FluentDocs.Docs.Snippets/FluentDocs.Docs.Snippets.csproj" />
+    <Project Path="tests/FluentDocs.Abstractions.Tests/FluentDocs.Abstractions.Tests.csproj" />
+    <Project Path="tests/FluentDocs.Charts.Tests/FluentDocs.Charts.Tests.csproj" />
+    <Project Path="tests/FluentDocs.Documents.Docx.Tests/FluentDocs.Documents.Docx.Tests.csproj" />
+    <Project Path="tests/FluentDocs.Documents.Markdown.Tests/FluentDocs.Documents.Markdown.Tests.csproj" />
+    <Project Path="tests/FluentDocs.Documents.Pdf.Tests/FluentDocs.Documents.Pdf.Tests.csproj" />
+    <Project Path="tests/FluentDocs.IntegrationTests/FluentDocs.IntegrationTests.csproj" />
+    <Project Path="tests/FluentDocs.Presentations.Tests/FluentDocs.Presentations.Tests.csproj" />
+    <Project Path="tests/FluentDocs.Tables.Tests/FluentDocs.Tables.Tests.csproj" />
+    <Project Path="tests/FluentDocs.Testing/FluentDocs.Testing.csproj" />
+    <Project Path="tests/FluentDocs.Tests/FluentDocs.Tests.csproj" />
+  </Folder>
+</Solution>

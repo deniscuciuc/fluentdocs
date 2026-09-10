@@ -1,0 +1,57 @@
+<Project>
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <AnalysisLevel>latest</AnalysisLevel>
+    <AnalysisMode>Recommended</AnalysisMode>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+
+    <!--
+      1591/1573/1574/1570/1735 are XML-doc completeness and malformed-doc warnings.
+      Vulnerability warnings (NU1901-NU1904) are deliberately NOT suppressed.
+    -->
+    <NoWarn>$(NoWarn);1591;1573;1574;1570;1735</NoWarn>
+    <NuGetAudit>true</NuGetAudit>
+    <NuGetAuditMode>all</NuGetAuditMode>
+    <NuGetAuditLevel>low</NuGetAuditLevel>
+  </PropertyGroup>
+
+  <!-- Packing is opt-in. Tests, test helpers and examples never ship. -->
+  <PropertyGroup>
+    <IsPackable>false</IsPackable>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Package metadata">
+    <Authors>Denis Cuciuc</Authors>
+    <Company>Denis Cuciuc</Company>
+    <Copyright>© 2026 Denis Cuciuc</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/deniscuciuc/fluentdocs</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/deniscuciuc/fluentdocs</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>documents;docx;pdf;xlsx;pptx;markdown;csv;charts;openxml;reporting;fluent</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <!-- Wired conditionally so the tree builds before the branding assets land. -->
+    <PackageIcon Condition="Exists('$(MSBuildThisFileDirectory)assets/icon.png')">icon.png</PackageIcon>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <!-- Set by CI so the published .snupkg maps to source for consumers. -->
+    <ContinuousIntegrationBuild Condition="'$(GITHUB_ACTIONS)' == 'true'">true</ContinuousIntegrationBuild>
+  </PropertyGroup>
+
+  <!-- Version comes from the git tag via MinVer; there is no <Version> anywhere. -->
+  <ItemGroup>
+    <PackageReference Include="MinVer" PrivateAssets="all" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <MinVerTagPrefix>v</MinVerTagPrefix>
+  </PropertyGroup>
+</Project>

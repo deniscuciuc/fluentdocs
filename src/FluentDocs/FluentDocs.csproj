@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>Fluent document generation for .NET — DOCX, PDF, XLSX, PPTX, Markdown, CSV and charts from one API. This umbrella package pulls in every renderer and registers them with AddFluentDocs().</Description>
+    <PackageTags>documents;docx;pdf;xlsx;pptx;markdown;csv;charts;reporting;fluent</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FluentDocs.Abstractions\FluentDocs.Abstractions.csproj" />
+    <ProjectReference Include="..\FluentDocs.Charts\FluentDocs.Charts.csproj" />
+    <ProjectReference Include="..\FluentDocs.Documents.Docx\FluentDocs.Documents.Docx.csproj" />
+    <ProjectReference Include="..\FluentDocs.Documents.Markdown\FluentDocs.Documents.Markdown.csproj" />
+    <ProjectReference Include="..\FluentDocs.Documents.Pdf\FluentDocs.Documents.Pdf.csproj" />
+    <ProjectReference Include="..\FluentDocs.Presentations\FluentDocs.Presentations.csproj" />
+    <ProjectReference Include="..\FluentDocs.Tables\FluentDocs.Tables.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" />
+  </ItemGroup>
+
+</Project>
