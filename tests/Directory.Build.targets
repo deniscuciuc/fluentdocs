@@ -1,0 +1,15 @@
+<Project>
+
+  <!--
+    xunit.v3 runs on Microsoft.Testing.Platform, and the .NET 10 SDK dropped VSTest support
+    for MTP-based runners. A test project is an executable that hosts its own runner;
+    `dotnet test` drives it through the runner declared in global.json.
+
+    This lives in Directory.Build.targets rather than .props because IsTestProject is set
+    inside the individual csproj files, which .props is imported too early to see.
+  -->
+  <PropertyGroup Condition="'$(IsTestProject)' != 'false'">
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+
+</Project>

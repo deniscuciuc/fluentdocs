@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.1] - 2026-09-11
+
+### Changed
+
+- Dependencies brought current: `xunit.v3` 4.0.0, `Microsoft.Extensions.*` 10.0.12,
+  `NSubstitute` 6.2.0, `ClosedXML` 0.105.1, `ScottPlot` 5.1.59.
+- **Migrated the test suite to Microsoft.Testing.Platform.** xunit v3 4.0 runs on MTP, and
+  the .NET 10 SDK no longer supports running MTP-based test projects through VSTest — the
+  old setup fails outright. The runner is declared in `global.json`, test projects build as
+  executables that host their own runner, and coverage comes from
+  `Microsoft.Testing.Extensions.CodeCoverage` rather than `coverlet.collector`. CI collects
+  Cobertura output as before.
+
 ## [1.0.0] - 2026-09-11
 
 Initial release. One fluent builder API that produces a serializable document definition,
@@ -54,5 +67,6 @@ bump across the set.
 149 tests across nine suites, including 78 integration tests that generate real DOCX, PDF,
 XLSX and PPTX files and read them back.
 
-[Unreleased]: https://github.com/deniscuciuc/fluentdocs/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/deniscuciuc/fluentdocs/compare/v1.0.1...HEAD
+[1.0.1]: https://github.com/deniscuciuc/fluentdocs/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/deniscuciuc/fluentdocs/releases/tag/v1.0.0
