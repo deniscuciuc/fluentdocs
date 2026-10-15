@@ -16,7 +16,7 @@
     <PackageVersion Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="10.0.12" />
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.10.0" />
     <PackageVersion Include="NSubstitute" Version="6.2.0" />
-    <PackageVersion Include="PDFsharp" Version="6.2.4" />
+    <PackageVersion Include="PDFsharp" Version="6.5.0" />
     <PackageVersion Include="ScottPlot" Version="5.1.59" />
     <PackageVersion Include="Microsoft.Testing.Extensions.CodeCoverage" Version="18.11.0" />
     <PackageVersion Include="xunit.v3" Version="4.0.0" />
